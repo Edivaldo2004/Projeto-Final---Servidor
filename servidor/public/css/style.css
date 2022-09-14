@@ -1,0 +1,114 @@
+body{   
+  background-image: linear-gradient(to right, rgb(68, 68, 214), rgb(11, 11, 222));
+}
+.row{
+  display: flex;
+  margin-left: 80px;
+}
+.container{
+  display: flex;
+
+}
+.name{
+  background-color: rgb(84, 78, 69);
+  width: 700px;
+  height: 500px;
+  margin-left: 500px;
+  border-radius: 14px;
+  border: 5px solid rgb(168, 154, 154);
+  transform: scale(1.2); 
+  box-shadow: 0 5px 14px rgba(147, 200, 231, 1.8);
+  margin-top: 80px;
+  background-image: url(https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2019/02/Incorporar-Formulario-do-Google.png);
+
+}
+.pet{
+  margin-top: 45px;
+  border-radius: 12px;
+  color: aliceblue;
+  margin-left: 20px;
+  box-shadow: 0 5px 14px rgba(147, 200, 231, 1.8);
+  width: 130px;
+  margin-left: 280px;
+  padding-left: 12px;
+}
+.pet2{
+  margin-top: 45px;
+  border-radius: 12px;
+  color: aliceblue;
+  margin-left: 20px;
+  box-shadow: 0 5px 14px rgba(147, 200, 231, 1.8);
+  width: 320px;
+  margin-left: 180px;  
+  padding-left: 28px;
+}
+.cor{
+  color: rgb(235, 235, 235);
+  margin-left: 10px;
+}
+label{
+  color: aliceblue;
+  margin-left: 10px;
+}
+input{
+width: 150px ;
+height: 30px;
+margin-top: 20px;
+border-radius: 8px;
+
+}
+.top{
+margin-top: 20px;
+}
+img{
+  border-radius: 30px;
+}
+.botão{
+  margin-top: 30px;
+  margin-left: 60px;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 10px;
+  background-color: rgb(9, 31, 19);
+  border-radius: 10px;
+  width: 90px;
+  background-color: #3b119e;
+  border: 6px solid rgb(0, 0, 0);
+  transform: scale(1.0); 
+  box-shadow: 0 6px 16px rgba(28, 216, 185, 0.6);
+  transition: 500ms;
+  color: aliceblue;
+  position: absolute;
+}
+.botão:hover{
+  background-color: blue;
+  transform:scale(1.1);
+  transition: 500ms;
+}
+.inscrever{
+  margin-left: 780px;
+  color: aliceblue;
+  margin-top: 28px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.image{
+  margin-left: 12px;
+  border-radius: 30px;
+  margin-top: 15px;
+}
+.imagens{
+  margin-left: 70px;
+  margin-top: 30px;
+}
+.second-image{
+  margin-left: 165px;
+  width: 40px;
+  height: 40px;
+  margin-top: 30px;
+}
+.não-cadastro{
+  color:rgb(235, 235, 235);
+  margin-left: 60px;
+  margin-top: 15px;
+}
