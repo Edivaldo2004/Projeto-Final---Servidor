@@ -1,3 +1,28 @@
-<% usuarios.forEach(function(usuario) { %>
-<p><%= usuario.nome %></p>
-<% }) ;%>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cont">
+      <h1 class="lista-de-usuarios">Lista de Usuários</h1>
+    </div>
+    <center>
+      <h2 class="users-first">Usuários</h2>
+    </center>
+    <div class="meio">
+      <% usuarios.forEach(function(usuario) { %>
+      <div class="card-conteudo">
+        <p>Id: <%= usuario.id %></p>
+        <p>Nome: <%= usuario.nome %></p>
+        <p>Senha: <%= usuario.senha %></p>
+        <p>Usuário: <%= usuario.usuario %></p>
+      </div>
+      <% }) ;%>
+    </div>
+  </body>
+</html>
