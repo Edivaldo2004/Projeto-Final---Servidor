@@ -93,11 +93,13 @@ input {
   column-gap: 10px;
 }
 .card-conteudo {
-  background-color: #0b3f8e;
+  background-color: #263752;
   width: 30%;
   border-radius: 7px;
   border-radius: 12px;
-  border: 2px solid rgb(17, 0, 255);
+  border: 2px solid rgb(51, 47, 105);
+  text-align: center;
+  padding: 20px;
 }
 p {
   color: azure;

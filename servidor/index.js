@@ -1,6 +1,7 @@
 // JWT
 require("dotenv-safe").config();
 const jwt = require('jsonwebtoken');
+const crypto = require('./crypto');
 var { expressjwt: expressJWT } = require("express-jwt");
 const cors = require('cors');
 
@@ -42,9 +43,10 @@ app.get('/cadastro', async function (req, res) {
 })
 
 app.post('/cadastro', async function (req, res) {
+  const criptografar = crypto.encrypt(req.body.password)
   const { password, nome, usuario: user } = req.body
   console.log({ password, nome, usuario: user })
-  const data = await usuario.create({ senha: password, nome, usuario: user })
+  const data = await usuario.create({ senha: criptografar, nome, usuario: user });
   res.json(data)
 })
 
@@ -53,8 +55,11 @@ app.get('/', async function (req, res) {
 })
 
 app.post('/logar', async (req, res) => {
-  const users = await usuario.findOne({ where: { user: req.body.user }});
-  if (req.body.user === users.user && req.body.password === users.password) {
+  const user = await usuario.findOne({ where: { usuario: req.body.user }});
+  console.log(user)
+  const descriptografar = crypto.decrypt(user.senha)
+  console.log(user)
+  if (req.body.user === user.usuario && req.body.password === descriptografar) {
     const id = 1;
     const token = jwt.sign({ id }, process.env.SECRET, {
       expiresIn: 3600 // expires in 1 hour
@@ -72,6 +77,6 @@ app.post('/deslogar', function (req, res) {
   res.json({ deslogado: true })
 })
 
-app.listen(3001, function () {
-  console.log('App de Exemplo escutando na porta 3000!')
+app.listen(4000, function () {
+  console.log('App de Exemplo escutando na porta 3001!')
 });
