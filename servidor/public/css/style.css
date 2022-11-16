@@ -5,17 +5,19 @@ body {
     Montserrat, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
   background-color: #282834;
+  min-height: 100vh;
 }
 .row {
   display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 h1 {
   color: azure;
 }
 .first-cadastrar {
-  margin-left: 700px;
   margin-top: 25px;
-  font-size: 22px;
+  font-size: 1.5rem;
   text-decoration: none;
   font-weight: bold;
   background-color: #1454b5;
@@ -29,7 +31,6 @@ h1 {
   transition: 2s;
 }
 .lista {
-  margin-left: 30px;
   margin-top: 25px;
   font-size: 22px;
   text-decoration: none;
@@ -47,7 +48,10 @@ h1 {
 }
 .name {
   display: flex;
-  margin-left: 200px;
+align-items: center;
+justify-content: center;
+height: 100%;
+margin-top: 2%;
 }
 .autenticar:hover {
   transform: scale(1.2);
@@ -61,7 +65,8 @@ h1 {
 }
 span {
   color: azure;
-  font-size: 35px;
+  font-size: 2rem;
+  margin-left: 10px;
 }
 .there-image {
   margin-left: 60px;
@@ -87,6 +92,7 @@ input {
 }
 .não-cadastro {
   text-decoration: none;
+  color: #329ff8;
 }
 .meio {
   display: flex;
@@ -119,4 +125,13 @@ p {
 .second-cadastro {
   margin-left: 20px;
   margin-top: 40px;
+}
+.form-cadastro{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
 }

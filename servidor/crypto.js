@@ -1,5 +1,6 @@
 const crypto = require('crypto');
 require("dotenv-safe").config();
+
 const IV = "5183666c72eec8f8"; // 16
 const ALGORITMO = "aes-256-cbc";
 const METODO_CRIPTOGRAFIA = 'hex';
@@ -18,4 +19,5 @@ const decrypt = ((text) => {
    let decrypted = decipher.update(text, METODO_DESCRIPTOGRAFIA, 'utf8');
    return (decrypted + decipher.final('utf8'));
 });
+
 module.exports = {encrypt, decrypt}
