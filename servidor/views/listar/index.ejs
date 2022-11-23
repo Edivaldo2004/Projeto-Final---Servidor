@@ -5,25 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>Document</title>
+    <title>Listar</title>
   </head>
   <body>
     <div class="cont">
-      <h1 class="lista-de-usuarios">Lista de Usuários</h1>
+      <h1 class="lista-de-usuarios">Lista de Produtos</h1>
     </div>
+
     <center>
-      <h2 class="users-first">Usuários</h2>
+      <h2 class="users-first">Produtos</h2>
     </center>
+
     <div class="meio">
-      <% usuarios.forEach(function(usuario) { %>
+      <% produtos.forEach(function(produto) { %>
       <div class="card-conteudo">
         <img src="/img/user.png" width="100px" height="100px">
-        <p>Id: <%= usuario.id %></p>
-        <p>Nome: <%= usuario.nome %></p>
-        <p>Senha: <%= usuario.senha %></p>
-        <p>Usuário: <%= usuario.usuario %></p>
+        <p>Id: <%= produto.id %></p>
+        <p>Nome: <%= produto.nome %></p>
+        <p>Imagem: <%= produto.imagem %></p>
+        <p>Descrição: <%= produto.descri %></p>
+        <p>Preco: <%= produto.preco %></p>
       </div>
       <% }) ;%>
+
+      <div class='parte-button'>
+        <form action="/excluir_produto" method="post">
+        <input type="hidden" name="id" value="{{id}}">
+        <button
+          class='button'
+        >Deletar</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

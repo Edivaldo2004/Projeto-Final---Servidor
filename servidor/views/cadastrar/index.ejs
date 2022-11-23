@@ -11,25 +11,25 @@
   <div class="container">
       <h1>Tetelestai</h1>
       <div class="row">
-    <a href="/cadastro" class="first-cadastrar">Cadastrar</a>
-    <a href="/lista" class="lista">Usuários</a>
-</div>
+
+    <a href="/autenticar" class="first-cadastrar">Cadastrar</a>
+    <a href="/lista" class="lista">Produtos</a>
+  </div>
 </div>
 
 <div class="name">
-<form action="/logar" method="post" class="form-cadastro">
-
-<h2 class="form">Autentica-se agora<br><span>na Tetelestai</span></h2>
-<input type="text" name="user" placeholder="Email">
+<form action="/cadastrar" method="post" class="form-cadastrar">
+<h2 class="form">Cadastra-se<span>na Tetelestai</span></h2>
+<input type="text" name="nome" placeholder="Nome">
+<input type="text" name="usuario" placeholder="Email">
 <input type="password" name="password" placeholder="Senha">
-<button type="submit" class="botão">Autenticar</button>
-<a href="/inscrever" class="não-cadastro">Não tenho cadastro :)</a>
+<button type="submit" class="botão">Cadastrar</button>
 </form>
-
 
 <article>
   <img src="/img/autenticar.png" class="there-image" width="400px">
 </article>
+
 </div>
 
 </body>
