@@ -1,5 +1,6 @@
-
+require("dotenv-safe").config();
 const cors = require('cors');
+const jwt = require('jsonwebtoken');
 
 var cookieParser = require('cookie-parser')
 
@@ -29,9 +30,14 @@ app.get('/cadastrar',(req, res) => {
 
 app.post('/cadastrar', async function (req, res) {
   const { nome, imagem, descri, preco} = req.body
-  console.log({ nome, imagem, descri, preco})
+  console.log(req.body)
   const data = await produto.create({ nome, imagem, descri, preco });
   res.json(data)
+})
+
+app.get('/listar', async function (req, res) {
+  const produtos = await produto.findAll();
+  res.render("listar", { produtos });
 })
 
 app.post("/excluir_produto", (req, res)=>{

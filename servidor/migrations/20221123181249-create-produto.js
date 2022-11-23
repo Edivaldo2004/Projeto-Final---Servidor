@@ -12,26 +12,21 @@ module.exports = {
         type: Sequelize.STRING
       },
       imagem: {
-        allowNull: false,
         type: Sequelize.STRING
       },
       descri: {
-        allowNull: false,
         type: Sequelize.STRING
       },
       preco: {
-        type: db.Sequelize.DOUBLE,
-        alowNull: false
-    }
+        type: Sequelize.DOUBLE
+      },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.fn('NOW')
+        type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.fn('NOW')
+        type: Sequelize.DATE
       }
     });
   },
