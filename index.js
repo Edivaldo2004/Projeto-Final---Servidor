@@ -53,5 +53,5 @@ app.post("/excluir_produto", (req, res)=>{
 })
 
 app.listen(4000, function () {
-  console.log('App de Exemplo escutando na porta 3001!')
+  console.log('App de Exemplo escutando na porta 4000!')
 });
