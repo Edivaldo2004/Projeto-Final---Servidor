@@ -40,6 +40,11 @@ app.get('/listar', async function (req, res) {
   res.render("listar", { produtos });
 })
 
+app.get('/listar-json', async function(req, res) {
+  const produtos = await produto.findAll();
+  res.json(produtos);
+})
+
 app.post("/excluir_produto", (req, res)=>{
   Produto.destroy({
   where:{
