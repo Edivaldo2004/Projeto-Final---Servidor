@@ -46,7 +46,7 @@ app.get('/listar-json', async function(req, res) {
 })
 
 app.post("/excluir_produto", (req, res)=>{
-  Produto.destroy({
+  produto.destroy({
   where:{
   id: req.body.id
   }
